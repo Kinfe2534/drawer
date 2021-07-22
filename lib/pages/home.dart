@@ -1,5 +1,7 @@
 // home.dart
 import 'package:flutter/material.dart';
+import 'package:drawer/widgets/left_drawer.dart';
+import 'package:drawer/widgets/right_drawer.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -13,7 +15,11 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         title: Text('Home'),
       ),
-      body: Container(),
+      drawer: LeftDrawerWidget(),
+      endDrawer: RightDrawerWidget(),
+      body: SafeArea(
+        child: Container(),
+      ),
     );
   }
 }
